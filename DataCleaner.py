@@ -1,14 +1,14 @@
-from distutils.command.clean import clean
+#Python script to split SMHI open data into separate text files based on content.
 import numpy as np
 import glob
-
+#Define function which loads a file and parses it into an array. Skips unimportant rows.
 def Cleaner(fname):
     fileArr = np.loadtxt(fname, dtype=str, skiprows=26, delimiter=";")
 
     return fileArr
-
+#Read all csv files in folder.
 fnames = np.array(glob.glob("*.csv"))
-
+#Loop over filenames and save as txt:s depending on column name. 
 for fname in fnames:
     print("Processing dataset " + fname)
 
