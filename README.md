@@ -23,3 +23,7 @@ Finally, all data is saved to text files (.txt).
 
 *dataprocessing.C: ROOT macro which takes the filename of a txt as input and returns a vector of doubles. This is the next step after running DataCleaner.py
 
+*plotting.C: ROOT macro for plotting the subsequent cleaned data. 
+
+*fitter.h: Header file containing functions for fitting the data. 
+
