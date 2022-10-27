@@ -27,3 +27,4 @@ Finally, all data is saved to text files (.txt).
 
 *fitter.h: Header file containing functions for fitting the data. 
 
+*dataprocessor.cpp and dataprocessor.h: deprecated as of now, irrelevant. 
