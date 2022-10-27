@@ -60,10 +60,10 @@ TGraph* plot_graph(std::vector<int> x_, std::vector<double> y_){
    auto e_grl = new TGraphErrors(x_size,x,y,ey);
    TGraph *grl= new TGraph(x_.size(),x,y);
    grl->Fit("pol4");
-   e_grl->Fit(pol4);
+   e_grl->Fit("pol4");
    gStyle->SetOptStat(1111);
    gStyle->SetOptFit(1111);
-   e_grl->SetTitle("TGraphErrors Example");
+   e_grl->SetTitle("Graph showing the trend in mean/median temperature in city; Years; Temperature");
    e_grl->SetMarkerColor(4);
    e_grl->SetMarkerStyle(6);
    e_grl->Draw("ACP");
