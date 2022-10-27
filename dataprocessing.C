@@ -4,7 +4,7 @@
 #include <stdexcept>
 #include <string>
 #include <algorithm>
-//ROOT Macro to convert input txt files to vectors. Contains two functions to keep ROOT happy.
+//ROOT Macro to convert input txt files to vectors. Contains three functions to keep ROOT happy.
 //Author: Love Kildetoft
 std::vector<double> temp(){
     std::string tEntry; //Temporary string
@@ -33,4 +33,19 @@ std::vector<int> date(){
         }
     };
     return dateVec;
+};
+
+std::vector<double> err(){
+    std::string eEntry; //Temporary string
+    std::ifstream errFile;
+    errFile.open("/meanErr_Falun.txt"); //open file
+    
+    std::vector<double> errVec;
+    //Loop over file line by line and push to vector.
+    if (tempFile.is_open()) {
+        while (std::getline(errFile, eEntry)) {
+            errVec.push_back(std::stod(eEntry));
+        }
+    };
+    return errVec;
 };
