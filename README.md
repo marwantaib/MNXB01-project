@@ -1,10 +1,10 @@
-# The temperature trend in Sweden during the COVID19 pandemic: a qualitative investigation using SMHI open data
+# The temperature trend in Sweden throughout the ages: a qualitative investigation using SMHI open data
 ## Final project in MNXB01: Introduction to programming and computing for scientists
 
 #### Project introduction
 
 The Swedish Meteorological and Hydrological institute (SMHI) regularly provides datasets open to the general public, which contain several variables which the institute monitors. One such variable is temperature, which has been regurarly measured in several swedish cities since the late 1800s.
-It is well known that there is an ever increasing trend towards higher temperatures, owing to global warming. Recent research has however indicated that this trend might have been temporarily broken during the worldwide COVID19 pandemic. Even though these effects may not have been significant to alter the prognosis for climate change, it is interesting to see if a similar effect was seen in Sweden as the government never imposed any strict lockdowns. The main cause of the decrease in greenhouse gas emissions is generally attributed to lockdowns, as these led to less travel and economic activities both domestically and internationally. 
+It is well known that there is an ever increasing trend towards higher temperatures, owing to global warming. 
 In this project we investigate the temperature trend in three swedish cities (Falun, Lund and Karlstad) over the period from 1942-2021. 
 
 #### Code 
