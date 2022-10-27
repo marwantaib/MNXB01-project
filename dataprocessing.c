@@ -10,7 +10,7 @@
 std::vector<double> parseToVec(std::string fname){
     std::string tEntry; //Temporary string
     std::ifstream tempFile; //Open file
-    tempFile.open("/meanT_Falun.txt");
+    tempFile.open(fname);
     
     std::vector<double> vec;
     //Read file line by line and push back to vector
