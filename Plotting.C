@@ -21,12 +21,10 @@ TH1D* plot_hist(std::vector<double> x){
 //creating the histogram and fills it using the for loop
     TH1D* h1 = new TH1D("h1","Histogram showing the trend in temperature in city",x.size(),min,max);
     for (int i = 0; i < x.size(); i++){
-       std::cout << x[i]<< std::endl;
         h1->Fill(x[i]);
     };
     
-   //Fitting for Histograms------------------------------------
-
+   //Fitting for Histograms
    h1->Fit(gaus,"R");
    h1->SetMinimum(0);
    gStyle->SetOptStat(1111);
@@ -35,21 +33,13 @@ TH1D* plot_hist(std::vector<double> x){
    h1->SetFillColor(kBlue);
    h1->SetFillStyle(3018);
    h1->Draw("e2same");
-   //End of Fitting ------------------------------------
-    return h1;
-};
-
-
-TGraph* plot_graph(std::vector<int> x_, std::vector<double> y_, std::vector<double> e_y_){
-    double x[x_.size()], y[y_.size()], e_y[e_y_.size()],;
-=======
-   h1->Draw("hist");
+   //End of Fitting 
    return h1;
 };
 
 //function that takes two vectors x and y and produces a graph. Returns the memory place of the graph so we can fit it
-TGraph* plot_graph(std::vector<int> x_, std::vector<double> y_){
-    double x[x_.size()], y[y_.size()];
+TGraph* plot_graph(std::vector<int> x_, std::vector<double> y_, std::vector<double> e_y_){
+    double x[x_.size()], y[y_.size()], e_y[e_y_.size()];
     for(int i=0; i< x_.size(); i++){
         x[i]=x_[i];
         y[i]=y_[i];
@@ -57,7 +47,7 @@ TGraph* plot_graph(std::vector<int> x_, std::vector<double> y_){
     };
 
    //Fitting for Graphs + errors
-   auto e_grl = new TGraphErrors(x_size,x,y,ey);
+   TGraphErrors *e_grl = new TGraphErrors(x_size,x,y,nullptr,e_y);
    TGraph *grl= new TGraph(x_.size(),x,y);
    grl->Fit("pol4");
    e_grl->Fit("pol4");
