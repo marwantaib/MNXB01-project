@@ -13,7 +13,7 @@ The project is implemented in Python 3.10 as well as in C++ using the Numpy libr
 
 ##### Dependencies
 
-ROOT (https://root.cern), Numpy (https://numpy.org), Python (https://www.python.org), C++ compiler (eg. https://gcc.gnu.org or built in ROOT compiler). For installation see links.
+ROOT (https://root.cern), Numpy (https://numpy.org), Python (https://www.python.org) (the anaconda distribution of python conveniently include both of these, see https://www.anaconda.com), C++ compiler (eg. https://gcc.gnu.org or built in ROOT compiler). For installation see links.
 
 The outline/functionality is as follows:
 
@@ -28,3 +28,17 @@ Finally, all data is saved to text files (.txt).
 *fitter.h: Header file containing functions for fitting the data. 
 
 *dataprocessor.cpp and dataprocessor.h: deprecated as of now, irrelevant. 
+
+#### How to run/install
+
+Step 0: Install all dependencies following the instructions at the webpages in the dependencies section above. 
+
+Step 1: Place all CSV-files you want to perform analysis on in the same folder as all of the code. 
+
+Step 2: Open up a terminal and navigate to the project folder. Run DataCleaner.py by typing Python3 DataCleaner.py in the terminal. Let the script finish, this should produce a number of .txt files containing mean values, median values and the corresponding years. 
+
+Step 3: Modify the filepath in each method in dataprocessing.C to the file you want to point to. 
+
+Step 4: Compile plotting.C by running ROOT and then typing .L plotting.C in the ROOT prompt. 
+
+Step 5: Type plot_graph(date(), temp(), err()) in the ROOT prompt and press enter. This should produce a plot which can then be saved. 
