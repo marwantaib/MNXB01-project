@@ -32,6 +32,14 @@ Finally, all data is saved to text files (.txt).
 #### How to run/install
 
 Step 0: Install all dependencies following the instructions at the webpages in the dependencies section above. 
+Using Anaconda for Python is handy, 
+
+DataCleaner.py only requires base Anaconda and was tested using Anaconda version 4.14.0. To install, simply follow https://www.anaconda.com/products/distribution#Downloads and run the graphical installer appropriate to the operating system you use. 
+
+To run without Anaconda, perform the following steps in this order:
+
+1. Install Python 3.9 or later by downloading the graphical installer from https://www.python.org/downloads/. It should automatically detect your operating system but if it does not, navigate to a version which corresponds to your operating system of choice. This can also be done using a package manager.
+2. Run *pip install numpy && pip install dateutils* in an appropriate terminal (on mac/linux, Terminal, on Windows, Command prompt). Pip is installed with Python and should work out of the box. 
 
 Step 1: Place all CSV-files you want to perform analysis on in the same folder as all of the code. 
 
