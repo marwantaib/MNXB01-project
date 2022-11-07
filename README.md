@@ -9,11 +9,11 @@ In this project we investigate the temperature trend in three swedish cities (Fa
 
 #### Code 
 
-The project is implemented in Python 3.10 as well as in C++ using the Numpy library for calculations and the ROOT library for graphics (https://root.cern).
+The project is implemented in Python 3.9 as well as in C++ using the Numpy library for calculations and the ROOT library for graphics (https://root.cern).
 
 ##### Dependencies
 
-ROOT (https://root.cern), Numpy (https://numpy.org), Python (https://www.python.org) (the anaconda distribution of python conveniently include both of these, see https://www.anaconda.com), C++ compiler (eg. https://gcc.gnu.org or built in ROOT compiler). For installation see links.
+ROOT 6.20/06 (https://root.cern), Numpy 1.21.5 (https://numpy.org), Dateutil 2.8.2 (https://dateutil.readthedocs.io/en/stable/), Python 3.9 or later (https://www.python.org) (the anaconda distribution of python conveniently includes all of these, see https://www.anaconda.com), C++ compiler (eg. https://gcc.gnu.org or built in ROOT compiler). For installation see links.
 
 The outline/functionality is as follows:
 
@@ -39,7 +39,7 @@ DataCleaner.py only requires base Anaconda and was tested using Anaconda version
 To run without Anaconda, perform the following steps in this order:
 
 1. Install Python 3.9 or later by downloading the graphical installer from https://www.python.org/downloads/. It should automatically detect your operating system but if it does not, navigate to a version which corresponds to your operating system of choice. This can also be done using a package manager.
-2. Run *pip install numpy && pip install dateutils* in an appropriate terminal (on mac/linux, Terminal, on Windows, Command prompt). Pip is installed with Python and should work out of the box. 
+2. Run *pip install numpy && pip install python-dateutil* in an appropriate terminal (on mac/linux, Terminal, on Windows, Command prompt). Pip is installed with Python and should work out of the box. 
 
 Step 1: Place all CSV-files you want to perform analysis on in the same folder as all of the code. 
 
