@@ -25,7 +25,7 @@ TH1D* plot_hist(std::vector<double> x){
     };
     
    //Fitting for Histograms
-   h1->Fit(gaus,"R");
+   h1->Fit("gaus","R");
    h1->SetMinimum(0);
    gStyle->SetOptStat(1111);
    gStyle->SetOptFit(1111);
@@ -47,7 +47,7 @@ TGraph* plot_graph(std::vector<int> x_, std::vector<double> y_, std::vector<doub
     };
 
    //Fitting for Graphs + errors
-   TGraphErrors *e_grl = new TGraphErrors(x_size,x,y,nullptr,e_y);
+   TGraphErrors *e_grl = new TGraphErrors(x_.size(),x,y,nullptr,e_y);
    TGraph *grl= new TGraph(x_.size(),x,y);
    grl->Fit("pol4");
    e_grl->Fit("pol4");
