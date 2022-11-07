@@ -4,15 +4,13 @@
 #include <stdexcept>
 #include <string>
 #include <algorithm>
-//ROOT Macro to convert input txt files to vectors. Contains three functions to keep ROOT happy.
-//Author: Love Kildetoft
+
 std::vector<double> temp(){
-    std::string tEntry; //Temporary string
+    std::string tEntry;
     std::ifstream tempFile;
-    tempFile.open("/meanT_Falun.txt"); //open file
+    tempFile.open("/Users/marwan/Desktop/Arkiv-2/medianT_Karlstad.txt");
     
     std::vector<double> tempVec;
-    //Loop over file line by line and push to vector.
     if (tempFile.is_open()) {
         while (std::getline(tempFile, tEntry)) {
             tempVec.push_back(std::stod(tEntry));
@@ -21,10 +19,24 @@ std::vector<double> temp(){
     return tempVec;
 };
 
+std::vector<double> er(){
+    std::string eEntry;
+    std::ifstream eFile;
+    eFile.open("/Users/marwan/Desktop/Arkiv-2/medErr_Karlstad.txt");
+    
+    std::vector<double> eVec;
+    if (eFile.is_open()) {
+        while (std::getline(eFile, eEntry)) {
+            eVec.push_back(std::stod(eEntry));
+        }
+    };
+    return eVec;
+};
+
 std::vector<int> date(){
     std::string dEntry;
     std::ifstream dateFile;
-    dateFile.open("/meanY_Falun.txt");
+    dateFile.open("/Users/marwan/Desktop/Arkiv-2/medianY_Karlstad.txt");
     
     std::vector<int> dateVec;
     if (dateFile.is_open()) {
@@ -33,19 +45,4 @@ std::vector<int> date(){
         }
     };
     return dateVec;
-};
-
-std::vector<double> err(){
-    std::string eEntry; //Temporary string
-    std::ifstream errFile;
-    errFile.open("/meanErr_Falun.txt"); //open file
-    
-    std::vector<double> errVec;
-    //Loop over file line by line and push to vector.
-    if (tempFile.is_open()) {
-        while (std::getline(errFile, eEntry)) {
-            errVec.push_back(std::stod(eEntry));
-        }
-    };
-    return errVec;
 };
