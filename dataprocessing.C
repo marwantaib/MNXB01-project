@@ -19,7 +19,7 @@ std::vector<double> temp(){
     return tempVec;
 };
 
-std::vector<double> er(){
+std::vector<double> err(){
     std::string eEntry;
     std::ifstream eFile;
     eFile.open("/Users/marwan/Desktop/Arkiv-2/medErr_Karlstad.txt");
