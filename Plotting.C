@@ -7,7 +7,7 @@
 #include "dataprocessing.C"
 #include<typeinfo>
 #include<TStyle.h>
-#include<TCanvas>
+
 
 // function that takes a vector of doubles and produces a histogram. Returns the memory place of the histogram so we can fit it.
 TH1D* plot_hist(std::vector<double> x){
